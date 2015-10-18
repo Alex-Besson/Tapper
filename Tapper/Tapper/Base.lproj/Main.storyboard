@@ -22,12 +22,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="b5q-Rc-Qah">
-                                <rect key="frame" x="31" y="20" width="538" height="119"/>
+                                <rect key="frame" x="31" y="60" width="538" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="b5q-Rc-Qah" secondAttribute="height" multiplier="538:119" id="rf7-Q2-AtL"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-8k-jBH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-8k-jBH" userLabel="btnPlay">
                                 <rect key="frame" x="202" y="436" width="196" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="2w2-iO-BBS"/>
@@ -40,8 +40,32 @@
                                         <exclude reference="RmW-6O-A6e"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBj-3O-U5R"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcG-hs-vyD">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3A-WX-j8y" userLabel="btnCoin">
+                                <rect key="frame" x="213" y="40" width="174" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="7Ea-eA-A1h"/>
+                                    <constraint firstAttribute="height" constant="190" id="jEU-TM-2Gc"/>
+                                </constraints>
+                                <state key="normal" image="Coin.png"/>
+                                <connections>
+                                    <action selector="coinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bty-uW-05S"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaE-MM-NvC" userLabel="lblTaps">
+                                <rect key="frame" x="143" y="278" width="315" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="2gn-WU-QVh"/>
+                                    <constraint firstAttribute="width" constant="315" id="qrd-DK-dgn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="47"/>
+                                <color key="textColor" red="0.19833630417575754" green="0.12544664168461403" blue="0.011166867234504722" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcG-hs-vyD" userLabel="txtHowMany">
                                 <rect key="frame" x="202" y="371" width="196" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="8rw-C9-4N6"/>
@@ -55,6 +79,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6ig-8k-jBH" secondAttribute="trailing" constant="100" id="2QQ-ji-OyK"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="centerX" secondItem="AcG-hs-vyD" secondAttribute="centerX" id="6Rx-5I-qWT"/>
+                            <constraint firstItem="h3A-WX-j8y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="14" id="81W-kz-72i"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="156" id="8zH-6e-Isv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ig-8k-jBH" secondAttribute="trailing" constant="156" id="9wo-vH-zS0"/>
                             <constraint firstItem="qMQ-C9-XMG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F1C-CN-xyf"/>
@@ -63,16 +88,21 @@
                             <constraint firstItem="qMQ-C9-XMG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SJe-Bc-urf"/>
                             <constraint firstItem="b5q-Rc-Qah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="T7k-Kd-mXp"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VaP-7e-8lc"/>
-                            <constraint firstItem="b5q-Rc-Qah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vzg-78-iyy"/>
+                            <constraint firstItem="b5q-Rc-Qah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Vzg-78-iyy"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cca-ve-77w"/>
+                            <constraint firstItem="kaE-MM-NvC" firstAttribute="top" secondItem="h3A-WX-j8y" secondAttribute="bottom" constant="48" id="g0I-rp-jiO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ig-8k-jBH" secondAttribute="trailing" constant="156" id="iMb-NE-LPX"/>
+                            <constraint firstItem="h3A-WX-j8y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2f-fo-nva"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="nqO-Uf-rkz"/>
+                            <constraint firstItem="h3A-WX-j8y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="owB-7R-Y6m"/>
                             <constraint firstAttribute="trailing" secondItem="qMQ-C9-XMG" secondAttribute="trailing" id="pei-OO-WQZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qMQ-C9-XMG" secondAttribute="bottom" id="qIN-iw-DSI"/>
                             <constraint firstItem="6ig-8k-jBH" firstAttribute="top" secondItem="AcG-hs-vyD" secondAttribute="bottom" constant="20" id="tEr-Kc-GUi"/>
+                            <constraint firstItem="kaE-MM-NvC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uJl-gG-PPq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="81W-kz-72i"/>
                                 <exclude reference="2QQ-ji-OyK"/>
                                 <exclude reference="8zH-6e-Isv"/>
                                 <exclude reference="9wo-vH-zS0"/>
@@ -82,6 +112,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnCoin" destination="h3A-WX-j8y" id="Y7b-UY-rO6"/>
+                        <outlet property="btnPlay" destination="6ig-8k-jBH" id="kOs-Y0-4KU"/>
+                        <outlet property="imgTapperLogo" destination="b5q-Rc-Qah" id="NR1-Vc-5wF"/>
+                        <outlet property="lblTaps" destination="kaE-MM-NvC" id="dHk-Xa-1Ho"/>
+                        <outlet property="txtHowMany" destination="AcG-hs-vyD" id="Zp5-ie-5w8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,6 +126,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Coin.png" width="244" height="268"/>
         <image name="Play Button.png" width="356" height="175"/>
         <image name="Tapper Logo.png" width="523" height="116"/>
         <image name="Wallpaper Background.jpg" width="1667" height="1667"/>
