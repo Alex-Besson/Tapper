@@ -14,6 +14,10 @@
 		FA5458841BD3538900D969AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5458821BD3538900D969AD /* LaunchScreen.storyboard */; };
 		FA54588F1BD3538900D969AD /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54588E1BD3538900D969AD /* TapperTests.swift */; };
 		FA54589A1BD3538900D969AD /* TapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5458991BD3538900D969AD /* TapperUITests.swift */; };
+		FA5458A81BD357B600D969AD /* Coin.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5458A71BD357B600D969AD /* Coin.png */; settings = {ASSET_TAGS = (); }; };
+		FA5458AA1BD357C100D969AD /* Play Button.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5458A91BD357C100D969AD /* Play Button.png */; settings = {ASSET_TAGS = (); }; };
+		FA5458AC1BD357D600D969AD /* Tapper Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5458AB1BD357D600D969AD /* Tapper Logo.png */; settings = {ASSET_TAGS = (); }; };
+		FA5458AE1BD357F100D969AD /* Wallpaper Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA5458AD1BD357F100D969AD /* Wallpaper Background.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		FA5458951BD3538900D969AD /* TapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5458991BD3538900D969AD /* TapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperUITests.swift; sourceTree = "<group>"; };
 		FA54589B1BD3538900D969AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5458A71BD357B600D969AD /* Coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coin.png; sourceTree = "<group>"; };
+		FA5458A91BD357C100D969AD /* Play Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button.png"; sourceTree = "<group>"; };
+		FA5458AB1BD357D600D969AD /* Tapper Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tapper Logo.png"; sourceTree = "<group>"; };
+		FA5458AD1BD357F100D969AD /* Wallpaper Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wallpaper Background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				FA5458791BD3538900D969AD /* AppDelegate.swift */,
 				FA54587B1BD3538900D969AD /* ViewController.swift */,
 				FA54587D1BD3538900D969AD /* Main.storyboard */,
+				FA5458AD1BD357F100D969AD /* Wallpaper Background.jpg */,
+				FA5458AB1BD357D600D969AD /* Tapper Logo.png */,
+				FA5458A91BD357C100D969AD /* Play Button.png */,
+				FA5458A71BD357B600D969AD /* Coin.png */,
 				FA5458801BD3538900D969AD /* Assets.xcassets */,
 				FA5458821BD3538900D969AD /* LaunchScreen.storyboard */,
 				FA5458851BD3538900D969AD /* Info.plist */,
@@ -228,6 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5458AE1BD357F100D969AD /* Wallpaper Background.jpg in Resources */,
+				FA5458AA1BD357C100D969AD /* Play Button.png in Resources */,
+				FA5458AC1BD357D600D969AD /* Tapper Logo.png in Resources */,
+				FA5458A81BD357B600D969AD /* Coin.png in Resources */,
 				FA5458841BD3538900D969AD /* LaunchScreen.storyboard in Resources */,
 				FA5458811BD3538900D969AD /* Assets.xcassets in Resources */,
 				FA54587F1BD3538900D969AD /* Main.storyboard in Resources */,
