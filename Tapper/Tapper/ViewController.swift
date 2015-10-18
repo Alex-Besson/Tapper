@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     // PLAY BUTTON
     @IBAction func playButtonPressed(sender: UIButton) {
         
-        if txtHowMany.text != nil && txtHowMany.text != "" {
+        if Int(txtHowMany.text!) != nil && txtHowMany.text! != "" {
             maxTaps = Int(txtHowMany.text!)!
             currentTaps = 0
             
@@ -77,9 +77,6 @@ class ViewController: UIViewController {
         btnCoin.hidden = true
         lblTaps.hidden = true
     }
-
-    
-    
     
     
     
